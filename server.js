@@ -1,4 +1,5 @@
 import config from './config';
+import apiRouter from './api';
 
 import express from 'express';
 const server = express();
@@ -8,9 +9,11 @@ server.get('/', (req, res) => {
 });
 
 // server.use mounts middleware functions at the specified path
+server.use('/api', apiRouter);
+
 // express.static is the only built in middleware in express
 // It serves static files
-server.use(express.static('public'))
+server.use(express.static('public'));
 
 // sending html via fs module and toString()
 // import fs from 'fs'; 
