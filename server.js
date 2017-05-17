@@ -8,5 +8,5 @@ server.get('/', (req, res) => {
 });
 
 server.listen(config.port, () => {
-	console.info('Server listening on port ', config.port);
+	console.info('Server listening on port: ', config.port);
 });
