@@ -4,8 +4,20 @@ import apiRouter from './api';
 import express from 'express';
 const server = express();
 
+//setting view engine so server can resond with view template
+//by default will look in views folder for index.ejs
+server.set('view engine', 'ejs');
+
 server.get('/', (req, res) => {
-	res.send('express loaded on get homepage');
+	//demonstrating sending text
+	// res.send('express loaded on get homepage');
+
+	//render ejs template
+	res.render('index', {
+		dataObjectFromBackend: 'I am a message from the backend!',
+		objectWithHtml: 'Want to see some <em>Fancy Letters</em>' ,
+
+	});
 });
 
 // server.use mounts middleware functions at the specified path

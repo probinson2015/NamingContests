@@ -1,0 +1,18 @@
+<%- include('header') -%>
+
+	<h3>Hello EJS</h3>
+
+	<p> <%= Math.floor( Math.random() * 10 ) %> </p>
+
+	<p>Below is content of a data object from the backend</p>
+		<%= dataObjectFromBackend %>
+
+	<p>Below is content that contains html tags</p>
+		<%= objectWithHtml %>
+
+	<p>Using the dash (%-) template tag instead of the %=  template will
+		result in transformed html
+	</p>
+		<%- objectWithHtml %>
+
+<%- include('footer.ejs') -%>
