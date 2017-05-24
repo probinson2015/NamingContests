@@ -16,7 +16,6 @@ server.get('/', (req, res) => {
 	res.render('index', {
 		dataObjectFromBackend: 'I am a message from the backend!',
 		objectWithHtml: 'Want to see some <em>Fancy Letters</em>' ,
-
 	});
 });
 
